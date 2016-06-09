@@ -1,0 +1,14 @@
+{# src/OC/PlatformBundle/Resources/views/layout.html.twig #}
+
+{% extends "GCCoreBundle::layout.html.twig" %}
+
+{% block title %}
+  Concerts - {{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+  {% block ocplatform_body %}
+  {% endblock %}
+
+{% endblock %}

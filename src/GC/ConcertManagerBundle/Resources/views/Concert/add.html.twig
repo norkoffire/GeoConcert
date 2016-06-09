@@ -1,0 +1,14 @@
+
+{% extends "GCConcertManagerBundle::layout.html.twig" %}
+
+{% block title %}
+  Ajouter un concert - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+  <h2>Nouveau concert</h2>
+
+  {{ include("GCConcertManagerBundle:Concert:form.html.twig") }}
+
+{% endblock %}

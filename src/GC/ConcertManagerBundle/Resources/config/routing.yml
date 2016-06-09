@@ -1,0 +1,28 @@
+concert_manager_homepage:
+    path:    /
+    defaults:
+        { _controller: GCConcertManagerBundle:Concert:index }
+        
+concert_manager_add:
+    path:    /add
+    defaults:
+        { _controller: GCConcertManagerBundle:Concert:add }
+        
+concert_manager_view:
+    path:      /view/{id}
+    defaults:
+        _controller: GCConcertManagerBundle:Concert:view
+        
+concert_manager_edit:
+    path:    /edit/{id}
+    defaults:
+        { _controller: GCConcertManagerBundle:Concert:edit }
+    requirements:
+        id:    \d+
+
+concert_manager_delete:
+    path:    /delete/{id}
+    defaults:
+        { _controller: GCConcertManagerBundle:Concert:delete }
+    requirements:
+        id:    \d+

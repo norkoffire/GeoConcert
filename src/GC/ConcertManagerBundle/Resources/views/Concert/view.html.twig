@@ -1,0 +1,35 @@
+{% extends "GCConcertManagerBundle::layout.html.twig" %}
+
+{% block title %}
+  Concerts - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+  <h2>{{ concert.titre }}</h2>
+ {{ concert.date|date('d/m/Y') }}</i>
+	
+  <div class="well">
+    {{ concert.description }}
+  </div>
+  
+  <div class="well">
+  {{ concert.adresse }}
+  </div>
+
+  <p>
+    <a href="{{ path('concert_manager_homepage') }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour à la liste
+    </a>
+    <a href="{{ path('concert_manager_edit', {'id': concert.id}) }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-edit"></i>
+      Modifier le concert
+    </a>
+    <a href="{{ path('concert_manager_delete', {'id': concert.id}) }}" class="btn btn-danger">
+      <i class="glyphicon glyphicon-trash"></i>
+      Supprimer le concert
+    </a>
+  </p>
+
+{% endblock %}

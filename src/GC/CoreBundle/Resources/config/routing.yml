@@ -1,0 +1,3 @@
+gc_core_homepage:
+    path:     /
+    defaults: { _controller: GCCoreBundle:Default:index }

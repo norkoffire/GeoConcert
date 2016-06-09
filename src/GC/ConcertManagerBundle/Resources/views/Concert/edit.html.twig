@@ -1,0 +1,20 @@
+{% extends "GCConcertManagerBundle::layout.html.twig" %}
+
+{% block title %}
+  Concerts - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+  <h2>Modifiez votre concert</h2>
+
+{{ include("GCConcertManagerBundle:Concert:form.html.twig") }}
+{%  set id = 2 %}
+  <p>
+    <a href="{{ path('concert_manager_view', {'id': id}) }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour à l'annonce
+    </a>
+  </p>
+
+{% endblock %}

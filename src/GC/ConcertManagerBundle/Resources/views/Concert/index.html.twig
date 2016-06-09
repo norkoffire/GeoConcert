@@ -1,0 +1,24 @@
+{% extends "GCConcertManagerBundle::layout.html.twig" %}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+  <table class="table table-hover">
+    <tr>
+    <th>titre</th>
+    <th>description</th>
+    <th>adresse</th>
+    </tr>
+
+  {% for concert in listConcert %}
+      <tr>
+    <th><a href="{{ path('concert_manager_view', {'id': concert.id}) }}">{{ concert.titre }}</a></th>
+    <th>{{ concert.description }}</th>
+    <th>{{ concert.adresse }}</th>
+      </tr>
+  {% endfor %}
+      </table>
+{% endblock %}
